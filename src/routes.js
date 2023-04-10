@@ -16,12 +16,24 @@
 
 */
 import Index from "views/Index.js";
-import Profile from "views/examples/Profile.js";
-import Maps from "views/examples/Maps.js";
-import Register from "views/examples/Register.js";
-import Login from "views/examples/Login.js";
+// import Profile from "views/examples/Profile.js";
+// import Maps from "views/examples/Maps.js";
+// import Register from "views/examples/Register.js";
+// import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
-import Icons from "views/examples/Icons.js";
+// import Icons from "views/examples/Icons.js";
+import CreditNotes from "views/examples/CreditNotes.js";
+import Customers from "views/examples/Customers.js";
+import DeliveryChallans from "views/examples/DeliveryChallans.js";
+import Esimates from "views/examples/Estimates.js";
+import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
+import Invoices from "views/examples/Invoives.js";
+import PaymentsReceived from "views/examples/PaymentsReceived.js";
+import PriceList from "views/examples/PriceLists.js";
+import RecurringInvoices from "views/examples/RecurringInvoices.js";
+import RetainerInvoices from "views/examples/RetainerInvoices.js";
+import SalesOrders from "views/examples/SalesOrders.js";
+
 import Items from "views/examples/Items.js";
 import Purchases from "views/examples/Purchases.js";
 import Accountant from "views/examples/Accountant.js";
@@ -42,34 +54,34 @@ var routes = [
     path: "/items",
     name: "Items",
     icon: "ni ni-basket text-blue",
-    component: Items,
+    // component: Items,
     layout: "/admin",
     children:[
       {
         path: "/items",
         name: "Items",
         // icon: "ni ni-basket text-blue",
-        component: Items,
-        layout: "/admin",
+        component: Tables,
+        layout: "/admin/items",
       },
       {
-        path: "/items/price-lists",
+        path: "/price-lists",
         name: "price-lists",
         // icon: "ni ni-basket text-blue",
-        component: Items,
-        layout: "/admin",
+        component: PriceList,
+        layout: "/admin/items",
       },
       {
-        path: "/items/inventory Adjustments",
+        path: "/inventory Adjustments",
         name: "inventory Adjustments",
         // icon: "ni ni-basket text-blue",
-        component: Items,
-        layout: "/admin",
+        component: InventoryAdjustments,
+        layout: "/admin/items",
       }
     ]
   },
   {
-    path: "/items/Banking",
+    path: "/Banking",
     name: "Banking",
     icon: "ni ni-credit-card text-orange",
     component: Banking,
@@ -86,56 +98,56 @@ var routes = [
         path: "/Sales/Customers",
         name: "Customers",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Customers,
         layout: "/admin",
       },
       {
         path: "/Sales/Esimates",
         name: "Esimates",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Esimates,
         layout: "/admin",
       },
       {
         path: "/Sales/Retained Invoices",
         name: "inventory Adjustments",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: RetainerInvoices,
         layout: "/admin",
       },
       {
         path: "/Sales/Delivery Challans",
         name: "Delivery Challans",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: DeliveryChallans,
         layout: "/admin",
       },
       {
         path: "/Sales/Invoices",
         name: "invoices",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Invoices,
         layout: "/admin",
       },
       {
         path: "/Sales/Payments Received",
         name: "Payments Received",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: PaymentsReceived,
         layout: "/admin",
       },
       {
         path: "/Sales/Recurring invoices",
         name: "Recurring invoices",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: RecurringInvoices,
         layout: "/admin",
       },
       {
         path: "/Sales/Credit Notes",
         name: "Credit Notes",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: CreditNotes,
         layout: "/admin",
       }
     ]

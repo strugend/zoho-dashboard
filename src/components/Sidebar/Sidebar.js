@@ -71,62 +71,57 @@ const Sidebar = (props) => {
   };
   // creates the links that appear in the left menu / Sidebar
   const createLinks = (routes) => {
-    
+
     return routes.map((prop, key) => {
-      const [isOpen,setIsOpen]=useState(false);
-    const toggle=()=>{
-      setIsOpen(!isOpen)
-    }
-      if(prop.children){
-      return (
-        <>
-          {/* <Button color="link" onClick={toggle} >{prop.name}</Button> */}
-          
+      const [isOpen, setIsOpen] = useState(false);
+      const toggle = () => {
+        setIsOpen(!isOpen)
+      }
+
+      if (prop.children) {
+        return (
+          <>
             <NavItem key={key}>
-              <NavLink onClick={toggle}  href="#"
-                  activeClassName="active">
-              
-              <i className={prop.icon}  />
-                  {prop.name}
-               
+              <NavLink onClick={toggle} href="#" 
+                activeClassName="active" >
+                <i className={prop.icon} />
+                {prop.name}
+                <i className={isOpen ? "bi-caret-down-fill d-flex justify-content-end" : "bi-caret-right-fill d-flex justify-content-end" } ></i>
               </NavLink>
-            
             </NavItem>
-          
-          
-          <Collapse isOpen={isOpen}>
-            {prop.children.map((item, key) => {
-              return(
-              <NavItem key={key}>
-                <NavLink
-                  to={item.layout + item.path}
-                  tag={NavLinkRRD}
-                  onClick={closeCollapse}
-                  activeClassName="active"
-                >
-                  <i className={item.icon} />
-                  {item.name}
-                </NavLink>
-              </NavItem>
-    )})}
-
-
-          </Collapse>
-        </>
-      )}else{
-      return (
-        <NavItem key={key}>
-          <NavLink
-            to={prop.layout + prop.path}
-            tag={NavLinkRRD}
-            onClick={closeCollapse}
-            activeClassName="active"
-          >
-            <i className={prop.icon} />
-            {prop.name}
-          </NavLink>
-        </NavItem>
-      );
+            <Collapse isOpen={isOpen}>
+              {prop.children.map((item, key) => {
+                return (
+                  <NavItem key={key}>
+                    <NavLink
+                      to={item.layout + item.path}
+                      tag={NavLinkRRD}
+                      onClick={closeCollapse}
+                      activeClassName="active"
+                    >
+                      <i className={item.icon} />
+                      {item.name}
+                    </NavLink>
+                  </NavItem>
+                )
+              })}
+            </Collapse>
+          </>
+        )
+      } else {
+        return (
+          <NavItem key={key}>
+            <NavLink
+              to={prop.layout + prop.path}
+              tag={NavLinkRRD}
+              onClick={closeCollapse}
+              activeClassName="active"
+            >
+              <i className={prop.icon} />
+              {prop.name}
+            </NavLink>
+          </NavItem>
+        );
       }
     });
   };
@@ -299,7 +294,7 @@ const Sidebar = (props) => {
               </NavLink>
             </NavItem>
           </Nav>
-          
+
         </Collapse>
       </Container>
     </Navbar>

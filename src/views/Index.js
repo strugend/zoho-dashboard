@@ -35,7 +35,7 @@ import {
   Table,
   Container,
   Row,
-  Col
+  Col, ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle
 } from "reactstrap";
 
 // core components
@@ -51,6 +51,11 @@ import Header from "components/Headers/Header.js";
 const Index = (props) => {
   const [activeNav, setActiveNav] = useState(1);
   const [chartExample1Data, setChartExample1Data] = useState("data1");
+
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => {
+    setIsOpen(!isOpen)
+  }
 
   if (window.Chart) {
     parseOptions(Chart, chartOptions());
@@ -68,8 +73,23 @@ const Index = (props) => {
       <Container className="mt--7" fluid>
         <Row>
           <Col className="mb-5 mb-xl-0" xl="8">
-            <Card className="bg-gradient-default shadow">
-              <CardHeader className="bg-transparent">
+            <div className="text-dark">
+              Cash Flow
+              <div className="float-right">
+                <ButtonDropdown isOpen={isOpen} toggle={toggle} >
+                  <DropdownToggle caret size="sm">
+                    This Fiscal Year
+                  </DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>This Fiscal Year</DropdownItem>
+                    <DropdownItem>Previous Fiscal Year</DropdownItem>
+                    <DropdownItem>Last 12 Months</DropdownItem>
+                  </DropdownMenu>
+                </ButtonDropdown>
+              </div>
+            </div>
+            <Card className="bg-gradient-default shadow mt-2">
+              {/* <CardHeader className="bg-transparent">
                 <Row className="align-items-center">
                   <div className="col">
                     <h6 className="text-uppercase text-light ls-1 mb-1">
@@ -107,7 +127,7 @@ const Index = (props) => {
                     </Nav>
                   </div>
                 </Row>
-              </CardHeader>
+              </CardHeader> */}
               <CardBody>
                 {/* Chart */}
                 <div className="chart">
