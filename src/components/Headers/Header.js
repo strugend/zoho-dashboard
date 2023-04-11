@@ -17,9 +17,10 @@
 */
 
 // reactstrap components
+import { Tooltip } from "chart.js";
 import { useState } from "react";
 import { Card, CardBody, CardTitle, Container, Row, Col, Progress, NavLink, ButtonDropdown,DropdownToggle,DropdownItem,DropdownMenu } from "reactstrap";
-
+import Tooltips from "../../views/examples/ToolTip.js";
 const Header = () => {
   const [isOpen,setIsOpen]=useState(false);
   const toggle=()=>{
@@ -33,7 +34,7 @@ const Header = () => {
             {/* Card stats */}
             <Row>
               <Col lg="6" xl="6">
-                <p className="text-dark"><b>Total Receivables</b></p>
+                <p className="text-dark"><b>Total Receivables</b> <Tooltips/></p>
                 <Card className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
@@ -97,7 +98,7 @@ const Header = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="6">
-                <p className="text-dark"><b>Total Payables </b></p>
+                <p className="text-dark"><b>Total Payables </b> <Tooltips/></p>
                 <Card className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
