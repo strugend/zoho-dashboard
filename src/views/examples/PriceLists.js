@@ -1,12 +1,12 @@
 import React from "react";
 
-const PriceList=()=>{
-    return 
-    (
+const PriceLists=()=>{
+    return(
         <>
-        <h1>This is  Price List</h1>
+        
+        {console.log("pricelist")}
+            <h1>this is itemsjhgl file</h1>
         </>
     )
 }
-
-export default PriceList;
+ export default PriceLists;

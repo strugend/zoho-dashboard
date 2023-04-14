@@ -38,7 +38,19 @@ const Admin = (props) => {
 
   const getRoutes = (routes) => {
     return routes.map((prop, key) => {
-      if (prop.layout === "/admin") {
+      if(prop.children )
+      {
+        return prop.children.map((item,key)=>{
+          return (
+            <Route 
+              path={item.layout+item.path}
+              component={item.component}
+              key={key}
+              />
+          )
+        })
+      }
+      else if (prop.layout === "/admin") {
         return (
           <Route
             path={prop.layout + prop.path}
@@ -76,10 +88,7 @@ const Admin = (props) => {
         }}
       />
       <div className="main-content" ref={mainContent}>
-        <AdminNavbar
-          {...props}
-          brandText={getBrandText(props.location.pathname)}
-        />
+        <AdminNavbar/>
         <Switch>
           {getRoutes(routes)}
           <Redirect from="*" to="/admin/index" />

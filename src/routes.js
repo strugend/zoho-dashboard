@@ -29,7 +29,7 @@ import Esimates from "views/examples/Estimates.js";
 import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
 import Invoices from "views/examples/Invoives.js";
 import PaymentsReceived from "views/examples/PaymentsReceived.js";
-import PriceList from "views/examples/PriceLists.js";
+import PriceLists from "views/examples/PriceLists.js";
 import RecurringInvoices from "views/examples/RecurringInvoices.js";
 import RetainerInvoices from "views/examples/RetainerInvoices.js";
 import SalesOrders from "views/examples/SalesOrders.js";
@@ -42,6 +42,7 @@ import E_way from "views/examples/E-way.js";
 import Report from "views/examples/Report.js"
 import TimeTracking from "views/examples/TimeTracking.js";
 import Sales from "views/examples/Sales.js"
+import Profile from "views/examples/Profile";
 var routes = [
   {
     path: "/index",
@@ -61,22 +62,22 @@ var routes = [
         path: "/items",
         name: "Items",
         // icon: "ni ni-basket text-blue",
-        component: Tables,
-        layout: "/admin/items",
+        component: Items,
+        layout: "/admin",
       },
       {
-        path: "/price-lists",
+        path: "/items/price-lists",
         name: "price-lists",
         // icon: "ni ni-basket text-blue",
-        component: PriceList,
-        layout: "/admin/items",
+        component: PriceLists,
+        layout: "/admin",
       },
       {
-        path: "/inventory Adjustments",
+        path: "/items/inventory Adjustments",
         name: "inventory Adjustments",
         // icon: "ni ni-basket text-blue",
         component: InventoryAdjustments,
-        layout: "/admin/items",
+        layout: "/admin",
       }
     ]
   },

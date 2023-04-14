@@ -20,7 +20,8 @@
 import { Tooltip } from "chart.js";
 import { useState } from "react";
 import { Card, CardBody, CardTitle, Container, Row, Col, Progress, NavLink, ButtonDropdown,DropdownToggle,DropdownItem,DropdownMenu } from "reactstrap";
-import Tooltips from "../../views/examples/ToolTip.js";
+// import Tooltips from "../../views/examples/ToolTip.js";
+import Tooltips from '../tools/ToolTips.js'
 const Header = () => {
   const [isOpen,setIsOpen]=useState(false);
   const toggle=()=>{
@@ -28,13 +29,13 @@ const Header = () => {
   }
   return (
     <>
-      <div className="header bg-gradient-info pb-8 pt-5 pt-md-8">
+      <div className="header  pb-8  ">
         <Container fluid>
           <div className="header-body">
             {/* Card stats */}
             <Row>
               <Col lg="6" xl="6">
-                <p className="text-dark"><b>Total Receivables</b> <Tooltips/></p>
+                <p className="text-dark"><b>Total Receivables</b> <Tooltips name="Receivables"class="bi-question-octagon" val="Current and overdue amount that you're yet to receive from customers"/></p>
                 <Card className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>
@@ -98,7 +99,7 @@ const Header = () => {
                 </Card>
               </Col>
               <Col lg="6" xl="6">
-                <p className="text-dark"><b>Total Payables </b> <Tooltips/></p>
+                <p className="text-dark"><b>Total Payables </b> <Tooltips name="payables"class="bi-question-octagon" val="Current and overdue amount that you're yet to pay your vendor"/></p>
                 <Card className="card-stats mb-4 mb-xl-0">
                   <CardBody>
                     <Row>

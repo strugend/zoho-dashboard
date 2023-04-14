@@ -20,7 +20,7 @@ import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
 import { PropTypes } from "prop-types";
-import sidebaritem from "./SidebarItem.js"
+
 // reactstrap components
 import {
   Button,
@@ -166,7 +166,7 @@ const Sidebar = (props) => {
           </NavbarBrand>
         ) : null}
         {/* User */}
-        <Nav className="align-items-center d-md-none">
+        {/* <Nav className="align-items-center d-md-none header bg-gradient-info">
           <UncontrolledDropdown nav>
             <DropdownToggle nav className="nav-link-icon">
               <i className="ni ni-bell-55" />
@@ -220,11 +220,11 @@ const Sidebar = (props) => {
               </DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
-        </Nav>
+        </Nav> */}
         {/* Collapse */}
         <Collapse navbar isOpen={collapseOpen}>
           {/* Collapse header */}
-          <div className="navbar-collapse-header d-md-none">
+          <div className="navbar-collapse-header ">
             <Row>
               {logo ? (
                 <Col className="collapse-brand" xs="6">
@@ -252,12 +252,12 @@ const Sidebar = (props) => {
             </Row>
           </div>
           {/* Form */}
-          <Form className="mt-4 mb-3 d-md-none">
+          {/* <Form className="mt-4 mb-3 ">
             <InputGroup className="input-group-rounded input-group-merge">
               <Input
                 aria-label="Search"
                 className="form-control-rounded form-control-prepended"
-                placeholder="Search"
+                placeholder="Search hjghjguy"
                 type="search"
               />
               <InputGroupAddon addonType="prepend">
@@ -266,7 +266,7 @@ const Sidebar = (props) => {
                 </InputGroupText>
               </InputGroupAddon>
             </InputGroup>
-          </Form>
+          </Form> */}
           {/* Navigation */}
           <Nav navbar>{createLinks(routes)}</Nav>
           {/* Divider */}
