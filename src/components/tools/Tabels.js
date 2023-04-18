@@ -18,7 +18,9 @@ function Tables(props) {
                     <tr key={key}>
                         {row.map((item,key)=>{
                             return(
+                             
                                 <td key={key}>{item}</td>
+                                
                             )
                         })}
                     </tr>

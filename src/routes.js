@@ -23,7 +23,7 @@ import Index from "views/Index.js";
 import Tables from "views/examples/Tables.js";
 // import Icons from "views/examples/Icons.js";
 import CreditNotes from "views/examples/CreditNotes.js";
-import Customers from "views/examples/Customers.js";
+import Customers from "views/examples/Sales/Customers.js";
 import DeliveryChallans from "views/examples/DeliveryChallans.js";
 import Esimates from "views/examples/Estimates.js";
 import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
@@ -37,11 +37,11 @@ import SalesOrders from "views/examples/SalesOrders.js";
 import Items from "views/examples/Items.js";
 import Purchases from "views/examples/Purchases.js";
 import Accountant from "views/examples/Accountant.js";
-import Banking from "views/examples/Banking.js";
+import Banking from "views/examples/Banking/Banking.js";
 import E_way from "views/examples/E-way.js";
 import Report from "views/examples/Report.js"
 import TimeTracking from "views/examples/TimeTracking.js";
-import Sales from "views/examples/Sales.js"
+import Sales from "views/examples/Sales/Sales.js"
 import Profile from "views/examples/Profile";
 var routes = [
   {
@@ -55,26 +55,25 @@ var routes = [
     path: "/items",
     name: "Items",
     icon: "ni ni-basket text-blue",
-    // component: Items,
     layout: "/admin",
     children:[
       {
-        path: "/items",
+        path: "/items/items",
         name: "Items",
         // icon: "ni ni-basket text-blue",
         component: Items,
         layout: "/admin",
       },
       {
-        path: "/items/price-lists",
-        name: "price-lists",
+        path: "/items/PriceLists",
+        name: "PriceLists",
         // icon: "ni ni-basket text-blue",
         component: PriceLists,
         layout: "/admin",
       },
       {
         path: "/items/inventory Adjustments",
-        name: "inventory Adjustments",
+        name: "Inventory Adjustments",
         // icon: "ni ni-basket text-blue",
         component: InventoryAdjustments,
         layout: "/admin",
@@ -92,7 +91,7 @@ var routes = [
     path: "/Sales",
     name: "Sales",
     icon: "ni ni-bullet-list-67 text-yellow",
-    component: Sales,
+    // component: Sales,
     layout: "/admin",
     children:[
       {

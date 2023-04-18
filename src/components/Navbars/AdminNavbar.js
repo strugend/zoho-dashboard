@@ -195,7 +195,7 @@ function AdminNavbar() {
      
       
       </Navbar>
-      <hr/>
+      <hr className='m-0 '/>
     </>
   );
 }

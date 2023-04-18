@@ -23,7 +23,7 @@ import Carousel from "./Carousel.js";
 const Footer = () => {
   return (
     <footer className="footer">
-      <hr />
+      <hr className="mt-0"/>
       <Row className="align-items-center justify-content-xl-between">
         <Col xl="5">
           {/* <div className="copyright text-center text-xl-left text-muted">
