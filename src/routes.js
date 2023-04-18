@@ -24,15 +24,15 @@ import Tables from "views/examples/Tables.js";
 // import Icons from "views/examples/Icons.js";
 import CreditNotes from "views/examples/CreditNotes.js";
 import Customers from "views/examples/Sales/Customers.js";
-import DeliveryChallans from "views/examples/DeliveryChallans.js";
-import Esimates from "views/examples/Estimates.js";
+import DeliveryChallans from "views/examples/Sales/DeliveryChallans.js";
+import Esimates from "views/examples/Sales/Estimates.js";
 import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
 import Invoices from "views/examples/Invoives.js";
 import PaymentsReceived from "views/examples/PaymentsReceived.js";
 import PriceLists from "views/examples/PriceLists.js";
 import RecurringInvoices from "views/examples/RecurringInvoices.js";
-import RetainerInvoices from "views/examples/RetainerInvoices.js";
-import SalesOrders from "views/examples/SalesOrders.js";
+import RetainerInvoices from "views/examples/Sales/RetainerInvoices.js";
+// import SalesOrders from "views/examples/Sales/SalesOrders.js";
 
 import Items from "views/examples/Items.js";
 import Purchases from "views/examples/Purchases.js";
@@ -43,6 +43,7 @@ import Report from "views/examples/Report.js"
 import TimeTracking from "views/examples/TimeTracking.js";
 import Sales from "views/examples/Sales/Sales.js"
 import Profile from "views/examples/Profile";
+import SalesOrder from "views/examples/Sales/SalesOrders";
 var routes = [
   {
     path: "/index",
@@ -109,10 +110,17 @@ var routes = [
         layout: "/admin",
       },
       {
-        path: "/Sales/Retained Invoices",
-        name: "inventory Adjustments",
+        path: "/Sales/Retainer Invoices",
+        name: "Retainer Invoices",
         // icon: "ni ni-basket text-blue",
         component: RetainerInvoices,
+        layout: "/admin",
+      },
+      {
+        path: "/Sales/Sales Order",
+        name: "Sales Order",
+        // icon: "ni ni-basket text-blue",
+        component: SalesOrder,
         layout: "/admin",
       },
       {
