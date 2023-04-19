@@ -27,8 +27,8 @@ import Customers from "views/examples/Sales/Customers.js";
 import DeliveryChallans from "views/examples/Sales/DeliveryChallans.js";
 import Esimates from "views/examples/Sales/Estimates.js";
 import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
-import Invoices from "views/examples/Invoives.js";
-import PaymentsReceived from "views/examples/PaymentsReceived.js";
+import Invoices from "views/examples/Sales/Invoices.js";
+import PaymentsReceived from "views/examples/Sales/PaymentsReceived.js";
 import PriceLists from "views/examples/PriceLists.js";
 import RecurringInvoices from "views/examples/RecurringInvoices.js";
 import RetainerInvoices from "views/examples/Sales/RetainerInvoices.js";
@@ -132,7 +132,7 @@ var routes = [
       },
       {
         path: "/Sales/Invoices",
-        name: "invoices",
+        name: "Invoices",
         // icon: "ni ni-basket text-blue",
         component: Invoices,
         layout: "/admin",

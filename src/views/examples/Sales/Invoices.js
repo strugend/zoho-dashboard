@@ -14,33 +14,37 @@ import Table from "../../../components/tools/Tabels.js"
 const menu = [
     { name: "All", link: "#" },
     { name: "Drapt", link: "#" },
-    { name: "Open", link: "#" },
-    { name: "Delivered", link: "#" },
-    { name: "Returned", link: "#" },
-    { name: "Partially Invoiced", link: "#" },
-    { name: "Invoiced", link: "#" }
+    { name: "Pending Approval", link: "#" },
+    { name: "Approved", link: "#" },
+    { name: "Client Viewed", link: "#" },
+    { name: "Partially Paid", link: "#" },
+    { name: "Unpaid", link: "#" },
+    { name: "Overdue", link: "#" },
+    { name: "Payment Initiated", link: "#" },
+    { name: "Paid", link: "#" },
+    { name: "Void", link: "#" },
+    { name: "New Custom View", link: "#" }
 
 ]
 
-const heading=["Date","Delivery Challans#","Reference#","Customer Name","Status","Invoice status","Amount"];
+const heading=["Date","Invoice#","Order Number","Customer Name","Status","Due date","Amount","Balance Due"];
 const row=[
-    ["22 Nov 2022","DC-000","61465","Registered Customer","Open","Open","79616"],
-    ["6 Oct 2022","DC-001","70349","Oversea Customer","Open","Open","21334"],
-    ["28 Jan 2023","DC-002","21135","SEZ Customer","Delivered","Delivered","73702"],
-    ["7 Jun 2022","DC-003","4691","Deemed Export Customer","Returned","Returned","71981"],
-    ["10 Nov 2022","DC-004","77629","Unregistered Customer","Draft","Draft","71233"],
-    ["24 Sep 2022","DC-005","63106","Composition Reg Customer","Delivered","Delivered","61435"],
-    ["4 Jan 2022","DC-006","51750","Consumer Customer","Deliverd","Delivered","64725"],
-    
+    ["25 May 2022","INV-0000","","Registered Customer","Draft","29 March 2024","504407","504407"],
+    ["25 May 2022","INV-0001","","Oversea Customer","Draft","29 March 2024","595199","595199"],
+    ["25 May 2022","INV-0002",""," SEZ Customer","Draft","29 March 2024","753718","753718"],
+    ["25 May 2022","INV-0003","","Deemed Export Customer","Draft","29 March 2024","363372","363372"],
+    ["25 May 2022","INV-0004","","Unregistered Customer","Draft","29 March 2024","286714","286714"],
+    ["25 May 2022","INV-0005","","Composition Reg Customer","Draft","29 March 2024","640914","640914"],
+    ["25 May 2022","INV-0000","","Consumer Customer","Draft","29 March 2024","759467","759467"],
 ]
-const DeliverChallans = () => {
+const Invoices = () => {
     return (
         <>
             <Row>
                 <Col sm={10}>
 
                     <Nav>
-                        <Dropdown menu={menu} name="All Delivery Challans" header="" key="all Delivery Challans"></Dropdown>
+                        <Dropdown menu={menu} name="All Invoices" header="" key="all Invoices"></Dropdown>
                     </Nav>
                 </Col>
                 <Col sm={2} className="justify-content-end">
@@ -70,4 +74,4 @@ const DeliverChallans = () => {
         </>
     )
 }
-export default DeliverChallans;
+export default Invoices;
