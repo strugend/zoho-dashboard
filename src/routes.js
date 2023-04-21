@@ -22,7 +22,7 @@ import Index from "views/Index.js";
 // import Login from "views/examples/Login.js";
 import Tables from "views/examples/Tables.js";
 // import Icons from "views/examples/Icons.js";
-import CreditNotes from "views/examples/CreditNotes.js";
+import CreditNotes from "views/examples/Sales/CreditNotes.js";
 import Customers from "views/examples/Sales/Customers.js";
 import DeliveryChallans from "views/examples/Sales/DeliveryChallans.js";
 import Esimates from "views/examples/Sales/Estimates.js";
@@ -30,7 +30,7 @@ import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
 import Invoices from "views/examples/Sales/Invoices.js";
 import PaymentsReceived from "views/examples/Sales/PaymentsReceived.js";
 import PriceLists from "views/examples/PriceLists.js";
-import RecurringInvoices from "views/examples/RecurringInvoices.js";
+import RecurringInvoices from "views/examples/Sales/RecurringInvoices.js";
 import RetainerInvoices from "views/examples/Sales/RetainerInvoices.js";
 // import SalesOrders from "views/examples/Sales/SalesOrders.js";
 
@@ -44,6 +44,15 @@ import TimeTracking from "views/examples/TimeTracking.js";
 import Sales from "views/examples/Sales/Sales.js"
 import Profile from "views/examples/Profile";
 import SalesOrder from "views/examples/Sales/SalesOrders";
+
+import Vendors from "views/examples/Purchases/vendors.js";
+import Expenses from "views/examples/Purchases/Expenses";
+import RecurringExpenses from "views/examples/Purchases/RecurringExpenses";
+import PurchasesOrders from "views/examples/Purchases/PurchasesOrders";
+import Bills from "views/examples/Purchases/Bills";
+import PaymentsMade from "views/examples/Purchases/PaymentsMade";
+import RecurringBills from "views/examples/Purchases/RecurringBills";
+import VendorCredits from "views/examples/Purchases/VendorCredits";
 var routes = [
   {
     path: "/index",
@@ -164,63 +173,63 @@ var routes = [
     path: "/purchases",
     name: "Purchases",
     icon: "ni ni-shop text-red",
-    component: Purchases,
+    // component: Purchases,
     layout: "/admin",
     children:[
       {
         path: "/purchases/vendors",
         name: "vendors",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Vendors,
         layout: "/admin",
       },
       {
         path: "/purchases/Expenses",
         name: "Expenses",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Expenses,
         layout: "/admin",
       },
       {
         path: "/purchases/Recurring expenses",
         name: "Recurring Expenses",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: RecurringExpenses,
         layout: "/admin",
       },
       {
         path: "/purchases/purchases orders",
         name: "purchases orders",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: PurchasesOrders,
         layout: "/admin",
       },
       {
         path: "/purchases/Bills",
         name: "Bills",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: Bills,
         layout: "/admin",
       },
       {
         path: "/purchases/payment made",
         name: "Payment made",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: PaymentsMade,
         layout: "/admin",
       },
       {
         path: "/purchases/Recurring Bills",
         name: "Recurring Bills",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: RecurringBills,
         layout: "/admin",
       },
       {
         path: "/purchases/Vendor Credit",
         name: "Vendor Credit",
         // icon: "ni ni-basket text-blue",
-        component: Items,
+        component: VendorCredits,
         layout: "/admin",
       }
     ]
