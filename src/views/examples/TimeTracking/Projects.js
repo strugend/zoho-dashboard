@@ -9,8 +9,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 import ToolTip from "components/tools/ToolTips.js";
-import Dropdown from '../../components/tools/dropdown.js'
-import Table from "../../components/tools/Tabels.js"
+import Dropdown from '../../../components/tools/dropdown.js'
+import Table from "../../../components/tools/Tabels.js"
 
 
 
@@ -38,10 +38,10 @@ const menu=[
 
 ]
 
-const Eway = () =>{
+const Projects = () =>{
     return(
         <>
-        <title>E-way | ZOHO Books</title>
+        <title>Projects | ZOHO Books</title>
         <Container fluid>
         <Row className="mt-1 mb-1" >
                 <Col sm={6}>
@@ -102,4 +102,4 @@ const Eway = () =>{
         </>
     )
 }
- export default Eway;
+ export default Projects;

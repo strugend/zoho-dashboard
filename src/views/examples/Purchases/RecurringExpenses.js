@@ -31,6 +31,7 @@ const menu = [
 const RecurringExpenses= () => {
     return (
         <>
+        <title>Recurring Expenses | ZOHO Books</title>
             <Row>
                 <Col sm={10}>
 

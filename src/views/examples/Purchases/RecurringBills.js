@@ -27,6 +27,7 @@ const menu = [
 const RecurringBills = () => {
     return (
         <>
+        <title>Recurring Bills | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button';
 import AdminNavbar from "components/Navbars/AdminNavbar";
 const Banking=()=>{
     return(
+        <>
+        <title>Banking | ZOHO Books</title>
        <Container fluid className="bg-white mt-0">
         <div className="float-right mb-5">
             <i className="bi-x-lg"></i>
@@ -21,6 +23,7 @@ const Banking=()=>{
             </div>
         </div>
        </Container>
+       </>
     )
 }
  export default Banking;

@@ -30,6 +30,7 @@ const menu = [
 const CreditNotes= () => {
     return (
         <>
+        <title>Credit Notes | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

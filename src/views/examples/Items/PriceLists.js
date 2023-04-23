@@ -9,8 +9,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 import ToolTip from "components/tools/ToolTips.js";
-import Dropdown from '../../components/tools/dropdown.js'
-import Table from "../../components/tools/Tabels.js"
+import Dropdown from '../../../components/tools/dropdown.js'
+import Table from "../../../components/tools/Tabels.js"
 
 
 const menu=[
@@ -31,6 +31,7 @@ const row=[
 const PriceLists=()=>{
     return(
         <>
+        <title>Price Lists | ZOHO Books</title>
         <div className="mt-2 ml-2">
         <Row className="">
                 <Col sm={10}>

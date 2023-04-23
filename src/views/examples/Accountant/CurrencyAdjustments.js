@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import AdminNavbar from "components/Navbars/AdminNavbar";
 import Container from 'react-bootstrap/Container';
@@ -11,53 +13,61 @@ import Dropdown from '../../../components/tools/dropdown.js'
 import Table from "../../../components/tools/Tabels.js"
 
 
-const menu = [
-    { name: "All Payments", link: "#" },
-   
-    { name:"New Custom View",link:"#"}
 
-]
 
-const heading=["Date","Payment#","Reference#","Vendor Name","Bill#","Mode","Amount","Unused Amount"];
+const heading=["Date","Currency","Exchange Rate","Gain or Loss","Notes"];
+
 const row=[
-    ["","","","","","","",""]
+  ["","","","",""]
 ]
-const PaymentsMade = () => {
-    return (
-        <>
-        <title>Payment Made | ZOHO Books</title>
-            <Row>
-                <Col sm={9}>
 
-                    <Nav>
-                        <Dropdown menu={menu} name="All Bills" header="DEFAULT FILTERS" key="all purchase Bills"></Dropdown>
-                    </Nav>
+const menu=[
+    {name:"Export Projects",link:"#"},
+    {name:"Export Tasks",link:"#"},
+    {name:"Export Timesheet",link:"#"},
+    {name:"Import Projects",link:"#"},
+    {name:"Import Tasks",link:"#"},
+    {name:"Import Timesheet",link:"#"},
+    {name:"Project Preferences",link:"#"},
+
+]
+
+const CurrencyAdjustments = () =>{
+    return(
+        <>
+        <title>Currency Adjustment | ZOHO Books</title>
+        <Container fluid className=" bg-white">
+        <Row className="mt-1 mb-1" >
+                <Col sm={7}>
+                    <h2 className="">Base Currency Adjustments</h2>
                 </Col>
-                <Col sm={3} className="justify-content-end">
+            
+                <Col sm={5} className="justify-content-end">
                     <Stack direction="horizontal" gap={3}>
                         <Nav>
-                            <Nav.Link href="#" size="lg">
-                                <i className="bi-plus" />New
-                            </Nav.Link>
-                            <Nav.Link href="#" size="lg" >
-                                <ToolTip class="bi-gear" val="Items Preferences" name="items_Preferences"/>
+                        <Nav.Link href="#" size="lg">
+                                <i className="bi-plus" />Make an Adjustment
                             </Nav.Link>
                             <Nav.Link href="#" size="lg">
-                                <i className="bi-list" />
+                                <i className="bi-person-add" />Find Accountant
                             </Nav.Link>
+            
+                            
+                            
                             <div className="vr" />
                             <Nav.Link href="#" className="text-primary">
                                 <i className="bi-lightbulb" />Page Tips</Nav.Link>
                         </Nav>
                     </Stack>
                 </Col>
+                
             </Row>
             <Container fluid className="mt-2">
               
                 <Table  heading={heading} row={row}/>
             </Container>
-
+            </Container>
         </>
     )
 }
-export default PaymentsMade;
+ export default CurrencyAdjustments;

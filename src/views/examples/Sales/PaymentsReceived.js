@@ -40,6 +40,7 @@ const row=[
 const PaymentReceived = () => {
     return (
         <>
+        <title>Payments Received | ZOHO Books</title>
             <Row>
                 <Col sm={8}>
 

@@ -7,8 +7,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Stack from 'react-bootstrap/Stack';
 import ToolTip from "components/tools/ToolTips.js";
-import Dropdown from '../../components/tools/dropdown.js'
-import Table from "../../components/tools/Tabels.js"
+import Dropdown from '../../../components/tools/dropdown.js'
+import Table from "../../../components/tools/Tabels.js"
 
 
 const menu = [
@@ -36,6 +36,7 @@ const row=[
 const Items = () => {
     return (
         <>
+        <title>Items | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

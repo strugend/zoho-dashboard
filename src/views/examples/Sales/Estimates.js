@@ -40,6 +40,7 @@ const row=[
 const Estimates = () => {
     return (
         <>
+        <title>Estimates | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

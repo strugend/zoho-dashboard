@@ -1,48 +1,25 @@
-/*!
 
-=========================================================
-* Argon Dashboard React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import Index from "views/Index.js";
-// import Profile from "views/examples/Profile.js";
-// import Maps from "views/examples/Maps.js";
-// import Register from "views/examples/Register.js";
-// import Login from "views/examples/Login.js";
-import Tables from "views/examples/Tables.js";
-// import Icons from "views/examples/Icons.js";
 import CreditNotes from "views/examples/Sales/CreditNotes.js";
 import Customers from "views/examples/Sales/Customers.js";
 import DeliveryChallans from "views/examples/Sales/DeliveryChallans.js";
 import Esimates from "views/examples/Sales/Estimates.js";
-import InventoryAdjustments from "views/examples/InventoryAdjustments.js";
+import InventoryAdjustments from "views/examples/Items/InventoryAdjustments.js";
 import Invoices from "views/examples/Sales/Invoices.js";
 import PaymentsReceived from "views/examples/Sales/PaymentsReceived.js";
-import PriceLists from "views/examples/PriceLists.js";
+import PriceLists from "views/examples/Items/PriceLists.js";
 import RecurringInvoices from "views/examples/Sales/RecurringInvoices.js";
 import RetainerInvoices from "views/examples/Sales/RetainerInvoices.js";
-// import SalesOrders from "views/examples/Sales/SalesOrders.js";
 
-import Items from "views/examples/Items.js";
-import Purchases from "views/examples/Purchases.js";
-import Accountant from "views/examples/Accountant.js";
+import Items from "views/examples/Items/Items.js";
+
+
 import Banking from "views/examples/Banking/Banking.js";
 import E_way from "views/examples/E-way.js";
 import Report from "views/examples/Report.js"
-import TimeTracking from "views/examples/TimeTracking.js";
-import Sales from "views/examples/Sales/Sales.js"
-import Profile from "views/examples/Profile";
+
+
+
 import SalesOrder from "views/examples/Sales/SalesOrders";
 
 import Vendors from "views/examples/Purchases/vendors.js";
@@ -53,6 +30,14 @@ import Bills from "views/examples/Purchases/Bills";
 import PaymentsMade from "views/examples/Purchases/PaymentsMade";
 import RecurringBills from "views/examples/Purchases/RecurringBills";
 import VendorCredits from "views/examples/Purchases/VendorCredits";
+import Projects from "views/examples/TimeTracking/Projects";
+import ManuualJournals from "views/examples/Accountant/ManuualJournals";
+import BulkUpdate from "views/examples/Accountant/BulkUpdate";
+import CurrencyAdjustments from "views/examples/Accountant/CurrencyAdjustments";
+import ChartsOfAccount from "views/examples/Accountant/ChartsOfAccount";
+import Budgets from "views/examples/Accountant/Budgets";
+import TranscationLocking from "views/examples/Accountant/TranscationLocking";
+import TiimeSheet from "views/examples/TimeTracking/TimeSheet";
 var routes = [
   {
     path: "/index",
@@ -238,20 +223,20 @@ var routes = [
     path: "/Time-Tracking",
     name: "Time-Tracking",
     icon: "ni ni-time-alarm text-info",
-    component: TimeTracking,
+    // component: TimeTracking,
     layout: "/admin",
     children:[{
       path: "/Time-Tracking/Projects",
       name: "Projects",
       // icon: "ni ni-time-alarm text-info",
-      component: TimeTracking,
+      component: Projects,
       layout: "/admin",
      },
     {
       path: "/Time-Tracking/TimeSheet",
       name: "TimeSheet",
       // icon: "ni ni-time-alarm text-info",
-      component: TimeTracking,
+      component: TiimeSheet,
       layout: "/admin",
     }]
     //login
@@ -268,48 +253,48 @@ var routes = [
     path: "/Accountant",
     name: "Accountant",
     icon: "ni ni-single-02 text-pink",
-    component: Accountant,
+    // component: Accountant,
     layout: "/admin",
     children:[{
       path: "/Accountant/Manual Journals",
       name: "Manual Journals",
       // icon: "ni ni-single-02 text-pink",
-      component: Accountant,
+      component: ManuualJournals,
       layout: "/admin"
       },
       {
         path: "/Accountant/Bulk Update",
         name: "Bulk Update",
         // icon: "ni ni-single-02 text-pink",
-        component: Accountant,
+        component: BulkUpdate,
         layout: "/admin"
       },
       {
         path: "/Accountant/Currency Adjustments",
       name: "Currency Adjustments",
       // icon: "ni ni-single-02 text-pink",
-      component: Accountant,
+      component: CurrencyAdjustments,
       layout: "/admin"
       },
       {
         path: "/Accountant/Chart of Accountants",
       name: "Chart of Accountants",
       // icon: "ni ni-single-02 text-pink",
-      component: Accountant,
+      component: ChartsOfAccount,
       layout: "/admin"
       },
       {
         path: "/Accountant.Budgets",
       name: "Budgets",
       // icon: "ni ni-single-02 text-pink",
-      component: Accountant,
+      component: Budgets,
       layout: "/admin"
       },
       {
         path: "/Accountant/Transaction Locking",
       name: "Transaction Locking",
       // icon: "ni ni-single-02 text-pink",
-      component: Accountant,
+      component: TranscationLocking,
       layout: "/admin"
       }
   ]

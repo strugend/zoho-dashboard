@@ -1,21 +1,4 @@
-/*!
 
-=========================================================
-* Argon Dashboard React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import { useState } from "react";
 import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 // nodejs library to set properties for components
@@ -56,6 +39,7 @@ import {
 var ps;
 
 const Sidebar = (props) => {
+  
   const [collapseOpen, setCollapseOpen] = useState();
   // verifies if routeName is the one active (in browser input)
   const activeRoute = (routeName) => {
@@ -69,15 +53,16 @@ const Sidebar = (props) => {
   const closeCollapse = () => {
     setCollapseOpen(false);
   };
+  
   // creates the links that appear in the left menu / Sidebar
   const createLinks = (routes) => {
-
+   
     return routes.map((prop, key) => {
       const [isOpen, setIsOpen] = useState(false);
+      
       const toggle = () => {
         setIsOpen(!isOpen)
       }
-
       if (prop.children) {
         return (
           <>
@@ -86,10 +71,10 @@ const Sidebar = (props) => {
                 activeClassName="active" >
                 <i className={prop.icon} />
                 {prop.name}
-                <i className={isOpen ? "bi-caret-down-fill d-flex justify-content-end" : "bi-caret-right-fill d-flex justify-content-end" } ></i>
+                <i key={key}className={isOpen ? "bi-caret-down-fill d-flex justify-content-end" : "bi-caret-right-fill d-flex justify-content-end" } ></i>
               </NavLink>
             </NavItem>
-            <Collapse isOpen={isOpen}>
+            <Collapse isOpen={isOpen} key={key}>
               {prop.children.map((item, key) => {
                 return (
                   <NavItem key={key}>
@@ -155,7 +140,7 @@ const Sidebar = (props) => {
         >
           <span className="navbar-toggler-icon" />
         </button>
-        {/* Brand */}
+        
         {logo ? (
           <NavbarBrand className="pt-0" {...navbarBrandProps}>
             <img
@@ -163,6 +148,7 @@ const Sidebar = (props) => {
               className="navbar-brand-img"
               src={logo.imgSrc}
             />
+            
           </NavbarBrand>
         ) : null}
         {/* User */}
@@ -172,7 +158,7 @@ const Sidebar = (props) => {
           {/* Collapse header */}
           <div className="navbar-collapse-header ">
             <Row>
-              {logo ? (
+              {/* {logo ? (
                 <Col className="collapse-brand" xs="6">
                   {logo.innerLink ? (
                     <Link to={logo.innerLink}>
@@ -184,7 +170,7 @@ const Sidebar = (props) => {
                     </a>
                   )}
                 </Col>
-              ) : null}
+              ) : null} */}
               <Col className="collapse-close" xs="6">
                 <button
                   className="navbar-toggler"
@@ -218,28 +204,8 @@ const Sidebar = (props) => {
           {/* Divider */}
           <hr className="my-3" />
           {/* Heading */}
-          <h6 className="navbar-heading text-muted">Documentation</h6>
-          {/* Navigation */}
-          <Nav className="mb-md-3" navbar>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/overview?ref=adr-admin-sidebar">
-                <i className="ni ni-spaceship" />
-                Getting started
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/colors?ref=adr-admin-sidebar">
-                <i className="ni ni-palette" />
-                Foundation
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://demos.creative-tim.com/argon-dashboard-react/#/documentation/alerts?ref=adr-admin-sidebar">
-                <i className="ni ni-ui-04" />
-                Components
-              </NavLink>
-            </NavItem>
-          </Nav>
+          
+         
 
         </Collapse>
       </Container>

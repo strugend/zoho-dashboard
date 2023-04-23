@@ -38,6 +38,7 @@ const row=[
 const PurchasesOrders = () => {
     return (
         <>
+        <title>Purchase Orders | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

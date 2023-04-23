@@ -38,6 +38,7 @@ const row=[
 const RecurringInvoices = () => {
     return (
         <>
+        <title>Recurring Invoices | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 

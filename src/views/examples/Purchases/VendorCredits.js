@@ -29,6 +29,7 @@ const menu = [
 const VendorCredits = () => {
     return (
         <>
+        <title>Vendor Credit | ZOHO Books</title>
             <Row>
                 <Col sm={9}>
 
