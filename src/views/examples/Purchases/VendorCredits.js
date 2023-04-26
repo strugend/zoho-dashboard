@@ -11,7 +11,7 @@ import Dropdown from '../../../components/tools/dropdown.js'
 import Table from "../../../components/tools/Tabels.js"
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
+import Ratio from 'react-bootstrap/Ratio';
 
 
 const menu = [
@@ -58,9 +58,9 @@ const VendorCredits = () => {
             </Row>
             <Container fluid className="bg-white mt-0 justify-content-center">
 
-            <Row xs={1} md={2} className="mt-3 pt-6 justify-content-center">
+            <Row xs={2} md={2} className="mt-3 pt-6 justify-content-center">
         <Col >
-          <Card className="align-items-center" style={{ height: '18rem' }}>
+          {/* <Card className="align-items-center" style={{ height: '18rem' }}>
             <Card.Body>
                 <Row className="d-flex align-items-center">
                     <Col sm={5}>
@@ -73,15 +73,19 @@ const VendorCredits = () => {
                     <h6>ZOHO Books</h6>
                     <p>How to create a vendor credit </p>
                     </Col>
-                </Row>
-              
-            </Card.Body>
-          </Card>
+                </Row> 
+                 </Card.Body>
+    </Card>*/}
+              <Ratio aspectRatio="16x16" >
+  <iframe src="https://youtu.be/embed/0e4ilLC6t-I" title="YouTube video" allowFullScreen></iframe>
+</Ratio>
+
+           
         </Col>
     </Row>
 
 
-
+    
         <div className="text-center mt-3">
         <h1>You deserve some credit too.</h1>
             <p>Create vendor credits and apply them to multiple bills when buying stuff from your vendor.</p>

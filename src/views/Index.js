@@ -25,6 +25,7 @@ import {
   Row,
   Col, ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle
 } from "reactstrap";
+import AdminFooter from "components/Footers/AdminFooter.js";
 
 // core components
 import {
@@ -254,6 +255,9 @@ const Index = (props) => {
           </Col>
         </Row>
       </Container>
+      <Container fluid>
+          <AdminFooter />
+        </Container>
     </>
   );
 };

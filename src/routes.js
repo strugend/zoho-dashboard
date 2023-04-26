@@ -38,6 +38,7 @@ import ChartsOfAccount from "views/examples/Accountant/ChartsOfAccount";
 import Budgets from "views/examples/Accountant/Budgets";
 import TranscationLocking from "views/examples/Accountant/TranscationLocking";
 import TiimeSheet from "views/examples/TimeTracking/TimeSheet";
+import Reports from "views/examples/Reports/Reports";
 var routes = [
   {
     path: "/index",
@@ -304,7 +305,7 @@ var routes = [
     path: "/Reports",
     name: "Reports",
     icon: "ni ni-chart-pie-35 text-pink",
-    component: Report,
+    component: Reports,
     layout: "/admin"
     //regidter
   }
