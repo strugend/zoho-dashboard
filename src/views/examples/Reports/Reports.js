@@ -1,8 +1,10 @@
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { NavLink as NavLinkRRD, Link } from "react-router-dom";
 import { Row,Col } from 'react-bootstrap';
+import {NavLink} from 'reactstrap';
+import AgingDetails from './Receivables/AgingDetails';
 const AllTabs=[
     {
         heading:"Bussiness Overview",
@@ -83,8 +85,10 @@ const AllTabs=[
                 name:"Aging Summary",
                 link:"",
             },{
-                name:"Aging Details",
-                link:"",
+                path:"/receivables/Aging Details",
+                name:"Aging Detailske",
+                component:AgingDetails,
+                layout:"/admin/reports"
             },
             {
                 name:"Invoice Details",
@@ -351,14 +355,21 @@ function Reports(props) {
             AllTabs.map((tabs,idx)=>{
                 return(
                     <>
-                    <Col  xs md lg={4} className="mb-3" kay={idx}>
+                    <Col  xs={12} md={12}lg={4} className="mb-3" kay={idx}>
                     <span className='mr-2 font-weight-normal'><i className={tabs.class}/></span>{tabs.heading}
                     {tabs.children.map((item,key)=>{
+                        console.log(item.component +"fj" )
                         return(
                             <>
                            
                                 <Nav>
-                                    <i className="bi-star text-muted mb-1"/><Nav.Link href="#" key={key} className="text-primary font-weight-light mb-1">{item.name}</Nav.Link>
+                                    <i className="bi-star text-muted mb-1"/>
+                                    <NavLink 
+                                        to={item.layout + item.path}
+                                        key={key} 
+                                        tag={NavLinkRRD}
+                                        activeClassName="active"
+                                        className="text-primary font-weight-light mb-1">{item.name}</NavLink>
                                 </Nav>
                                 <hr className='m-0 pl-4'/>
                                
